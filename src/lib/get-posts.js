@@ -26,6 +26,7 @@ export function getPosts({ page = 1, limit } = {}) {
 
 // Get all posts and add metadata
 const posts = Object.entries(import.meta.globEager('/posts/**/*.md'))
+  .filter(([filepath, post]) => post.metadata.status !== 'draft')
   .map(([filepath, post]) => {
     return {
       ...post.metadata,
@@ -58,8 +59,8 @@ const posts = Object.entries(import.meta.globEager('/posts/**/*.md'))
   .map((post) => {
     const parsedHtml = parse(post.component.render().html)
 
-    // Use the custom preview in the metadata, if availabe, or the first paragraph of the post for the preview
-    const preview = post.customPreview? post.customPreview : parsedHtml.querySelector('p')
+    // Use the custom preview in the metadata, if available, or the first paragraph of the post for the preview
+    const preview = post.customPreview ? post.customPreview : parsedHtml.querySelector('p')
 
     return {
       ...post,
