@@ -24,6 +24,7 @@
 
 <div class="flex flex-col flex-grow">
   <!-- replace with a bio about you, or something -->
+  <!-- TODO: Add posts -->
 
   <!-- recent posts -->
   <h2 class="flex items-baseline gap-4 !mb-2">
@@ -36,5 +37,8 @@
         <PostPreview {post} small />
       </div>
     {/each}
+    {#if recentPosts.length < 1}
+      <h4>No posts at the moment. Please come back later!</h4>
+    {/if}
   </div>
 </div>
