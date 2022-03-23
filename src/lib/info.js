@@ -5,7 +5,7 @@
 /**
  * Used for the header of the page and in SEO
  */
-export const name = 'Bhlog Schlog' // replace with your name
+export const name = "Hans' Blog"
 
 /**
  * Used for SEO in /posts/[slug]
