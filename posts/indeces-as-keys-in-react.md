@@ -17,6 +17,7 @@ The key is how React knows if something is unique or not in a list. By looking a
 
 However, the indeces "never change" when swapping items. Let's say you want to swap two items in a list and you're using indeces as keys. What's the difference then, between
 `[ 1, 2, 3, 4, 5 ]` and `[ 1, 2, 3, 4, 5 ]` ? Essentially that's what _React sees_. But if you use more unique keys that are actually tied to the underlying object, you can see why this makes sense:
+
 **Before update:**
 `[ "title1_1646", "title2_9913", "title4_8135", "title3_0013", "title5_1224" ]`
 
