@@ -29,11 +29,11 @@ When I add a new Japanese word/phrase with characters I'm not familiar with, I'l
 reference the "Remembering the Kanji" entry for each character, thus giving me
 more useful context and applying the learnings you get from RTK:
 
-![Word with character back-links](word.png)
+![Word with character back-links](./posts/on-quitting-anki/word.png)
 
 And then allowing me to view that characters card:
 
-![Reference popup](reference-popup.png)
+![Reference popup](./posts/on-quitting-anki/reference-popup.png)
 
 I've been using the same feature for my AWS studies as I prepare for a certificate
 exam.
