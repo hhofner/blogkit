@@ -1,6 +1,7 @@
 ---
 title: On Quitting Anki
 date: 2022-06-13
+status: published
 tags: japanese study personal
 ---
 

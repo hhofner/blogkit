@@ -1,6 +1,7 @@
 ---
 title: What I Want To Learn In 2022
 date: 2022-01-01
+status: published
 tags: personal learning
 ---
 
