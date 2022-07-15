@@ -22,7 +22,7 @@
         </a>
       </h2>
       <div class="flex">
-        <a href="/rss.xml">
+        <a href="/rss.xml" rel="external">
           <div class="h-5 w-4 sm:h-8 sm:w-8 sm:p-1">
             <RssIcon class={prefersLight ? 'text-slate-500' : 'text-slate-400'} />
           </div>
