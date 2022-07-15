@@ -4,6 +4,7 @@
   import 'focus-visible'
   import MoonIcon from 'heroicons-svelte/solid/MoonIcon.svelte'
   import SunIcon from 'heroicons-svelte/solid/SunIcon.svelte'
+  import RssIcon from 'heroicons-svelte/solid/RssIcon.svelte'
   import { browser } from '$app/env'
   import { name } from '$lib/info'
 
@@ -12,7 +13,7 @@
 
 <div class="flex flex-col min-h-screen">
   <div class="mx-auto flex flex-col flex-grow w-full max-w-4xl">
-    <div class="flex h-16 px-4 py-2 justify-between items-center">
+    <div class="flex flex-col h-16 px-4 py-2 justify-between items-center">
       <h2
         class="!text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-500 dark:from-violet-500 dark:to-pink-500"
       >
@@ -20,31 +21,38 @@
           {name}
         </a>
       </h2>
-      {#if browser}
-        <button
-          type="button"
-          role="switch"
-          aria-label="Toggle Dark Mode"
-          aria-checked={!prefersLight}
-          class="h-4 w-4 sm:h-8 sm:w-8 sm:p-1"
-          on:click={() => {
-            prefersLight = !prefersLight
-            localStorage.setItem('prefersLight', prefersLight.toString())
+      <div class="flex">
+        <a href="/rss.xml">
+          <div class="h-5 w-4 sm:h-8 sm:w-8 sm:p-1">
+            <RssIcon class={prefersLight ? 'text-slate-500' : 'text-slate-400'} />
+          </div>
+        </a>
+        {#if browser}
+          <button
+            type="button"
+            role="switch"
+            aria-label="Toggle Dark Mode"
+            aria-checked={!prefersLight}
+            class="h-4 w-4 sm:h-8 sm:w-8 sm:p-1"
+            on:click={() => {
+              prefersLight = !prefersLight
+              localStorage.setItem('prefersLight', prefersLight.toString())
 
-            if (prefersLight) {
-              document.querySelector('html').classList.remove('dark')
-            } else {
-              document.querySelector('html').classList.add('dark')
-            }
-          }}
-        >
-          {#if prefersLight}
-            <MoonIcon class="text-slate-500" />
-          {:else}
-            <SunIcon class="text-slate-400" />
-          {/if}
-        </button>
-      {/if}
+              if (prefersLight) {
+                document.querySelector('html').classList.remove('dark')
+              } else {
+                document.querySelector('html').classList.add('dark')
+              }
+            }}
+          >
+            {#if prefersLight}
+              <MoonIcon class="text-slate-500" />
+            {:else}
+              <SunIcon class="text-slate-400" />
+            {/if}
+          </button>
+        {/if}
+      </div>
     </div>
     <main
       class="prose prose-slate prose-sm sm:prose sm:prose-slate sm:prose-lg sm:max-w-none dark:prose-invert flex flex-col w-full flex-grow py-4 px-4"
