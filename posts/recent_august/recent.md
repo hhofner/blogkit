@@ -18,7 +18,7 @@ This book is real fun and has me remembering all my physics courses in Uni.
 
 ### Mamita Yunai
 
-![Mamita Yunai](./mamita/jpg)
+![Mamita Yunai](./mamita.jpg)
 
 ## Articles/Magazines
 
