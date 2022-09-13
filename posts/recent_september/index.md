@@ -45,6 +45,17 @@ values to something more suitable for HTML/CSS properties, and not
 in a linear pattern that can sometimes be disorienting with 
 animations.
 
+## Git
+
+Gitting gud is one of my developer goals. Here's an awesome squasher:
+
+```bash
+  git reset --soft HEAD~3 &&
+  git commit
+```
+
+No `git rebase` or `git merge --squash`! Wonderful. Taken from this Stackoverflow thread: https://stackoverflow.com/questions/5189560/how-do-i-squash-my-last-n-commits-together
+
 ## Games
 
 Splatoon 3 was released this last week and with me trying to keep 
